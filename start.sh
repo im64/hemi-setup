@@ -14,10 +14,7 @@ apt-get install -y wget tar
 wget -O $TARBALL_NAME $TARBALL_URL
 
 # Extract the tarball
-tar -xvzf $TARBALL_NAME -C $EXTRACT_DIR
-
-# Change into the extracted directory
-cd $EXTRACT_DIR
+tar -xvzf /app/downloads/$TARBALL_NAME -C /app --strip-components=1
 
 # Run the binary
-./popmd
+/app/popmd
