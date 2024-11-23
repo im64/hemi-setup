@@ -1,0 +1,64 @@
+version: "3.8"
+
+services:
+  # Common service configuration
+  base_popm_container: &base_popm_container
+    image: ubuntu:latest
+    environment:
+      POPM_STATIC_FEE: 100
+      POPM_BFG_URL: "wss://testnet.rpc.hemi.network/v1/ws/public"
+    restart: always
+    build:
+      context: .
+    volumes:
+      - /tmp/popm_container:/app
+    command: ["/bin/bash", "-c", "/app/start.sh"]
+
+  popm_container_1:
+    <<: *base_popm_container
+    container_name: popm_container_1
+    environment:
+      POPM_BTC_PRIVKEY: ${PRIV_KEY_1}
+
+  popm_container_2:
+    <<: *base_popm_container
+    container_name: popm_container_2
+    environment:
+      POPM_BTC_PRIVKEY: ${PRIV_KEY_2}
+
+  popm_container_3:
+    <<: *base_popm_container
+    container_name: popm_container_3
+    environment:
+      POPM_BTC_PRIVKEY: ${PRIV_KEY_3}
+
+  popm_container_4:
+    <<: *base_popm_container
+    container_name: popm_container_4
+    environment:
+      POPM_BTC_PRIVKEY: ${PRIV_KEY_4}
+
+  popm_container_5:
+    <<: *base_popm_container
+    container_name: popm_container_5
+    environment:
+      POPM_BTC_PRIVKEY: ${PRIV_KEY_5}
+
+  popm_container_6:
+    <<: *base_popm_container
+    container_name: popm_container_6
+    environment:
+      POPM_BTC_PRIVKEY: ${PRIV_KEY_6}
+
+  popm_container_7:
+    <<: *base_popm_container
+    container_name: popm_container_7
+    environment:
+      POPM_BTC_PRIVKEY: ${PRIV_KEY_7}
+
+  popm_container_8:
+    <<: *base_popm_container
+    container_name: popm_container_8
+    environment:
+      POPM_BTC_PRIVKEY: ${PRIV_KEY_8}
+
