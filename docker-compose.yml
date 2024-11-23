@@ -1,63 +1,90 @@
 version: "3.8"
 
 services:
-  # Common service configuration
-  base_popm_container: &base_popm_container
-    image: ubuntu:latest
-    environment:
-      POPM_STATIC_FEE: 100
-      POPM_BFG_URL: "wss://testnet.rpc.hemi.network/v1/ws/public"
-    restart: always
+  popm_container_1:
     build:
       context: .
-    volumes:
-      - /tmp/popm_container:/app
-    command: ["/bin/bash", "-c", "/app/start.sh"]
-
-  popm_container_1:
-    <<: *base_popm_container
-    container_name: popm_container_1
+      dockerfile: Dockerfile
     environment:
-      POPM_BTC_PRIVKEY: ${PRIV_KEY_1}
+      - POPM_BTC_PRIVKEY=${PRIV_KEY_1}
+      - POPM_STATIC_FEE=100
+      - POPM_BFG_URL=wss://testnet.rpc.hemi.network/v1/ws/public
+    restart: always
+    container_name: popm-container-1
 
   popm_container_2:
-    <<: *base_popm_container
-    container_name: popm_container_2
+    build:
+      context: .
+      dockerfile: Dockerfile
     environment:
-      POPM_BTC_PRIVKEY: ${PRIV_KEY_2}
+      - POPM_BTC_PRIVKEY=${PRIV_KEY_2}
+      - POPM_STATIC_FEE=100
+      - POPM_BFG_URL=wss://testnet.rpc.hemi.network/v1/ws/public
+    restart: always
+    container_name: popm-container-2
 
   popm_container_3:
-    <<: *base_popm_container
-    container_name: popm_container_3
+    build:
+      context: .
+      dockerfile: Dockerfile
     environment:
-      POPM_BTC_PRIVKEY: ${PRIV_KEY_3}
+      - POPM_BTC_PRIVKEY=${PRIV_KEY_3}
+      - POPM_STATIC_FEE=100
+      - POPM_BFG_URL=wss://testnet.rpc.hemi.network/v1/ws/public
+    restart: always
+    container_name: popm-container-3
 
   popm_container_4:
-    <<: *base_popm_container
-    container_name: popm_container_4
+    build:
+      context: .
+      dockerfile: Dockerfile
     environment:
-      POPM_BTC_PRIVKEY: ${PRIV_KEY_4}
+      - POPM_BTC_PRIVKEY=${PRIV_KEY_4}
+      - POPM_STATIC_FEE=100
+      - POPM_BFG_URL=wss://testnet.rpc.hemi.network/v1/ws/public
+    restart: always
+    container_name: popm-container-4
 
   popm_container_5:
-    <<: *base_popm_container
-    container_name: popm_container_5
+    build:
+      context: .
+      dockerfile: Dockerfile
     environment:
-      POPM_BTC_PRIVKEY: ${PRIV_KEY_5}
+      - POPM_BTC_PRIVKEY=${PRIV_KEY_5}
+      - POPM_STATIC_FEE=100
+      - POPM_BFG_URL=wss://testnet.rpc.hemi.network/v1/ws/public
+    restart: always
+    container_name: popm-container-5
 
   popm_container_6:
-    <<: *base_popm_container
-    container_name: popm_container_6
+    build:
+      context: .
+      dockerfile: Dockerfile
     environment:
-      POPM_BTC_PRIVKEY: ${PRIV_KEY_6}
+      - POPM_BTC_PRIVKEY=${PRIV_KEY_6}
+      - POPM_STATIC_FEE=100
+      - POPM_BFG_URL=wss://testnet.rpc.hemi.network/v1/ws/public
+    restart: always
+    container_name: popm-container-6
 
   popm_container_7:
-    <<: *base_popm_container
-    container_name: popm_container_7
+    build:
+      context: .
+      dockerfile: Dockerfile
     environment:
-      POPM_BTC_PRIVKEY: ${PRIV_KEY_7}
+      - POPM_BTC_PRIVKEY=${PRIV_KEY_7}
+      - POPM_STATIC_FEE=100
+      - POPM_BFG_URL=wss://testnet.rpc.hemi.network/v1/ws/public
+    restart: always
+    container_name: popm-container-7
 
   popm_container_8:
-    <<: *base_popm_container
-    container_name: popm_container_8
+    build:
+      context: .
+      dockerfile: Dockerfile
     environment:
-      POPM_BTC_PRIVKEY: ${PRIV_KEY_8}
+      - POPM_BTC_PRIVKEY=${PRIV_KEY_8}
+      - POPM_STATIC_FEE=100
+      - POPM_BFG_URL=wss://testnet.rpc.hemi.network/v1/ws/public
+    restart: always
+    container_name: popm-container-8
