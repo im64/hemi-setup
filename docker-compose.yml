@@ -1,5 +1,3 @@
-version: "3.8"
-
 services:
   popm_container_1:
     build:
