@@ -4,6 +4,7 @@
 TARBALL_URL="https://github.com/hemilabs/heminetwork/releases/download/v0.5.0/heminetwork_v0.5.0_linux_amd64.tar.gz"
 TARBALL_NAME="hemi.tar.gz"
 EXTRACT_DIR="/app/hemi"
+mkdir -p $EXTRACT_DIR
 
 # Install wget if it's not installed
 apt-get update
