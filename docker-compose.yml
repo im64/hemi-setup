@@ -61,4 +61,3 @@ services:
     container_name: popm_container_8
     environment:
       POPM_BTC_PRIVKEY: ${PRIV_KEY_8}
-
