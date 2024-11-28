@@ -5,7 +5,7 @@ services:
       dockerfile: Dockerfile
     environment:
       - POPM_BTC_PRIVKEY=${PRIV_KEY_1}
-      - POPM_STATIC_FEE=1700
+      - POPM_STATIC_FEE=${STATIC_FEE}
       - POPM_BFG_URL=wss://testnet.rpc.hemi.network/v1/ws/public
     restart: always
     container_name: popm-container-1
@@ -16,7 +16,7 @@ services:
       dockerfile: Dockerfile
     environment:
       - POPM_BTC_PRIVKEY=${PRIV_KEY_2}
-      - POPM_STATIC_FEE=1700
+      - POPM_STATIC_FEE=${STATIC_FEE}
       - POPM_BFG_URL=wss://testnet.rpc.hemi.network/v1/ws/public
     restart: always
     container_name: popm-container-2
@@ -27,7 +27,7 @@ services:
       dockerfile: Dockerfile
     environment:
       - POPM_BTC_PRIVKEY=${PRIV_KEY_3}
-      - POPM_STATIC_FEE=1700
+      - POPM_STATIC_FEE=${STATIC_FEE}
       - POPM_BFG_URL=wss://testnet.rpc.hemi.network/v1/ws/public
     restart: always
     container_name: popm-container-3
@@ -38,7 +38,7 @@ services:
       dockerfile: Dockerfile
     environment:
       - POPM_BTC_PRIVKEY=${PRIV_KEY_4}
-      - POPM_STATIC_FEE=1700
+      - POPM_STATIC_FEE=${STATIC_FEE}
       - POPM_BFG_URL=wss://testnet.rpc.hemi.network/v1/ws/public
     restart: always
     container_name: popm-container-4
@@ -49,7 +49,7 @@ services:
       dockerfile: Dockerfile
     environment:
       - POPM_BTC_PRIVKEY=${PRIV_KEY_5}
-      - POPM_STATIC_FEE=1700
+      - POPM_STATIC_FEE=${STATIC_FEE}
       - POPM_BFG_URL=wss://testnet.rpc.hemi.network/v1/ws/public
     restart: always
     container_name: popm-container-5
@@ -60,7 +60,7 @@ services:
       dockerfile: Dockerfile
     environment:
       - POPM_BTC_PRIVKEY=${PRIV_KEY_6}
-      - POPM_STATIC_FEE=1700
+      - POPM_STATIC_FEE=${STATIC_FEE}
       - POPM_BFG_URL=wss://testnet.rpc.hemi.network/v1/ws/public
     restart: always
     container_name: popm-container-6
@@ -71,7 +71,7 @@ services:
       dockerfile: Dockerfile
     environment:
       - POPM_BTC_PRIVKEY=${PRIV_KEY_7}
-      - POPM_STATIC_FEE=1700
+      - POPM_STATIC_FEE=${STATIC_FEE}
       - POPM_BFG_URL=wss://testnet.rpc.hemi.network/v1/ws/public
     restart: always
     container_name: popm-container-7
@@ -82,7 +82,7 @@ services:
       dockerfile: Dockerfile
     environment:
       - POPM_BTC_PRIVKEY=${PRIV_KEY_8}
-      - POPM_STATIC_FEE=1700
+      - POPM_STATIC_FEE=${STATIC_FEE}
       - POPM_BFG_URL=wss://testnet.rpc.hemi.network/v1/ws/public
     restart: always
     container_name: popm-container-8
